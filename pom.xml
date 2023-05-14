@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.sunrun</groupId>
+  <artifactId>Java-Cucumber-Selenium</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>SunRun</name>
+  <url>http://maven.apache.org</url>
+    <build>
+        <plugins>
+<!--  maven-compiler-plugin, configures the Java compiler version to be used.
+In this case, it sets both the source and target versions to 1.8.-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+
+  <dependencies>
+<!--      The selenium-java artifact includes the necessary Java bindings
+and dependencies for working with Selenium WebDriver-->
+      <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.9.0</version>
+    </dependency>
+<!--      The cucumber-java artifact provides the necessary
+Java implementation and APIs to support Cucumber feature files-->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.12.0</version>
+    </dependency>
+<!--      Cucumber-JUnit provides integration between Cucumber and JUnit,
+allowing to run Cucumber feature files as JUnit tests.-->
+      <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>7.12.0</version>
+      <scope>test</scope>
+    </dependency>
+<!--      JUnit library, support writing and running unit tests in the project.-->
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.13.1</version>
+          <scope>test</scope>
+      </dependency>
+<!--      the cucumber-reporting library provides reporting capabilities for
+Cucumber tests, allowing to generate HTML reports-->
+      <dependency>
+          <groupId>net.masterthought</groupId>
+          <artifactId>cucumber-reporting</artifactId>
+          <version>5.7.5</version>
+      </dependency>
+<!--      the webdrivermanager library simplifies the management of
+WebDriver (ChromeDriver, GeckoDriver) by automatically downloading
+and setting up the required WebDriver-->
+      <dependency>
+          <groupId>io.github.bonigarcia</groupId>
+          <artifactId>webdrivermanager</artifactId>
+          <version>5.3.2</version>
+      </dependency>
+
+  </dependencies>
+</project>
