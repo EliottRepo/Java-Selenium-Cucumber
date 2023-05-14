@@ -12,7 +12,6 @@ public class Hooks extends CommonUI {
 
     @Before
     public void setup(Scenario scenario) {
-        System.out.println("**************Line 2: " );
         prop = ReadPropertyData.getProperties(configFilePath);
         openBrowser(prop.getProperty("browser"));
         navigate(prop.getProperty("url"));
@@ -22,8 +21,6 @@ public class Hooks extends CommonUI {
     @After
     public void tearDown(Scenario scenario) {
         System.out.println("Finished Executing Test Scenario: [" + scenario.getName() + "]");
-        System.out.println("**************Line 1: " );
-
         if (driver != null) {
             driver.quit();
         }    }

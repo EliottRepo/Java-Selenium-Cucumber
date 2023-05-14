@@ -6,7 +6,7 @@ Feature: Home page search
 
   Scenario: Search for a term on Google
     Then Verify list of home menu items are present
-      | Plans & wServices |
+      | Plans & Services |
       | Why Sunrun       |
       | Solar Storage    |
       | EV Charging      |
