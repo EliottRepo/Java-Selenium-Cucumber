@@ -12,7 +12,6 @@ import java.util.List;
 
 public class HomePage extends CommonUI {
     public HomePage() {
-//        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
     @FindBy(css= ".gtm-consent-close:first-child svg path")
@@ -30,8 +29,6 @@ public class HomePage extends CommonUI {
     public void verifyHomeMenuItemsAreDisplayed(List<String> expectedMenuItems) {
         System.out.println(homeMenuItems.size());
         for (WebElement SingleMenuItem : homeMenuItems) {
-
-            System.out.println("**************Line 1: " + SingleMenuItem.getText());
 
             Assert.assertTrue("* "+SingleMenuItem.getText() + " is not Displayed", SingleMenuItem.isDisplayed());
             Assert.assertTrue("* "+SingleMenuItem.getText()  + " is not in Menu List",expectedMenuItems.contains( SingleMenuItem.getText()));
